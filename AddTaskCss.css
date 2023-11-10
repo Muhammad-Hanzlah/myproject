@@ -1,0 +1,513 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#icon-of-task-button,
+#icon-of-location-button {
+    font-size: 25px;
+    margin: 5px 10px 0 50px;
+}
+
+.container {
+    display: flex;
+}
+
+.task {
+    margin-top: 30px;
+}
+
+.location {
+    margin-top: 30px;
+    background: black;
+    width: 255px;
+    height: 50px;
+    text-align: center;
+    justify-content: center;
+    border-radius: 0px 30px 30px 0px;
+    background-color: white;
+}
+
+.tasks {
+    margin-left: 150px;
+    text-align: start;
+    justify-content: start;
+    width: 342px;
+    height: 621px;
+}
+
+.tasks ul li {
+    text-align: start;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.active-button {
+    color: white;
+    background: black;
+}
+
+.inactive-button {
+    color: black;
+    background: white;
+}
+
+#taskBtn,
+#locationBtn {
+    outline: none;
+    border: none;
+    font-size: 16px;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    width: 255px;
+    height: 50px;
+    border-radius: 0px 30px 30px 0px;
+    cursor: pointer;
+}
+
+.modal,
+.lmodal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content{
+    padding: 40px;
+    background-color: #fff;
+    margin: 114px 0 0 258px;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 765px;
+    height: 501px;
+    border-radius: 10px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.locationn-content {
+    padding: 40px;
+    background-color: #fff;
+    margin: 114px 0 0 258px;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 465px;
+    height: 301px;
+    border-radius: 10px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.modal-content h3{
+    margin-left: 50px;
+}
+.close-button {
+    color: #888;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+label,
+input {
+    margin: 15px 0;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: auto;
+    margin-left: 200px;
+    width: 346px;
+    height: 96px;
+}
+
+#okTaskButton {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 20px;
+    cursor: pointer;
+    outline: none;
+    width: 348px;
+}
+
+button.cancel {
+    background-color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    outline: none;
+    width: 348px;
+    border: none;
+}
+
+.data-in-mini-page {
+    width: 726px;
+    height: 248px;
+    margin: 22px 68px;
+}
+
+.summary,
+.description,
+.date {
+    display: flex;
+    border-bottom: 1px solid #999;
+    width: 80%;
+    margin-left: 20px;
+}
+
+.summary textarea {
+    margin-top: 5px;
+    padding-top: 10px;
+    border: none;
+    outline: none;
+    color: #888;
+}
+
+.date input {
+    width: 80%;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    height: 80px;
+    border: none;
+}
+
+.description {
+    height: 150px;
+    text-align: start;
+    outline: none;
+}
+
+.description h5 {
+    margin-right: 5px;
+    color: #999
+}
+
+.date h5 {
+    margin-right: 5px;
+    margin-top: 30px;
+    color: #999
+}
+
+.summary h5 {
+    margin-right: 5px;
+    margin-top: 5px;
+    padding-top: 0;
+    color: #999
+}
+
+.description textarea {
+    border: none;
+    resize: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    color: #888;
+}
+
+textarea::-webkit-scrollbar {
+    display: none;
+}
+
+textarea::placeholder {
+    color: #999;
+}
+
+#text-area-summary {
+    border: none;
+    resize: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    height: 50px;
+    padding: 0px;
+    margin-left: 10px;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.date-input {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    color: #888;
+}
+
+#icon-mini {
+    margin-right: 10px;
+    font-size: 20px;
+    justify-content: center;
+    text-align: center;
+    color: #888;
+}
+
+#icon-des {
+    margin-right: 10px;
+    font-size: 20px;
+    margin-top: 20px;
+    justify-content: center;
+    text-align: center;
+    color: #888;
+}
+
+#icon-date {
+    margin-right: 10px;
+    font-size: 20px;
+    margin-top: 25px;
+    justify-content: center;
+    text-align: center;
+    color: #888;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    justify-content: flex-start;
+    text-align: start;
+    margin: 0;
+
+}
+
+.checkbox {
+    margin-right: 13px;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(218, 218, 218, 1);
+    outline: none;
+    -webkit-appearance: none;
+    /* Remove default appearance */
+    -moz-appearance: none;
+    appearance: none;
+    background-color: rgba(218, 218, 218, .5);
+    position: relative;
+    cursor: pointer;
+}
+
+.checkbox:checked::before {
+    content: '\f00c';
+    /* Checkmark symbol */
+    font-size: 20px;
+    font-family: FontAwesome;
+    color: #999;
+    /* Color of the checkmark */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+#incompleteTasks {
+    margin: 0;
+    padding: 0;
+}
+
+#completedTasks {
+    margin: 0;
+    padding: 0;
+    color: #999;
+}
+
+.title-date-container {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.tododate {
+    color: #888;
+    font-size: 14px;
+
+}
+
+.tododate::before {
+    content: "\f017";
+    font-family: FontAwesome;
+    float: left;
+    color: rgb(221, 61, 61);
+    font-size: 15px;
+    margin-right: 5px;
+    margin-top: 2px;
+}
+
+/* Add the following CSS to hide the mini page when the task is added */
+.hide-mini-page {
+    display: none;
+}
+
+
+
+#locationModal {
+    display: none;
+}
+
+#location-description{
+    margin-bottom: 20px;
+    padding: 5px;
+    outline: none;
+}
+
+#location-notes{
+    margin-bottom: 10px;
+    padding: 5px;
+    outline: none;
+
+}
+/* Center the heading */
+.locationn-content h3 {
+text-align: center;
+margin: 0; /* Remove margin from the heading */
+}
+
+/* Arrange elements vertically */
+.data-in-location-page {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+/* Set fixed width and height for text areas */
+.locationn-content textarea {
+width: 100%; /* Set a fixed width */
+height: 60px; /* Set a fixed height */
+margin: 0; /* Remove margin */
+}
+
+.locationbuttons {
+display: flex;
+flex-direction: column;
+margin: 10px;
+width: 50%;
+text-align: center;
+}
+#locationAdd{
+background: black;
+color: white;
+padding: 8px;
+border-radius: 15px;
+margin-bottom: 10px;
+border: none;
+}
+.locationCancel{
+padding: 8px;
+border-radius: 15px;
+border: none;
+}
+
+
+
+
+
+
+
+
+/* Style for the icon */
+.icon {
+float: right;
+font-size: 24px; /* Adjust the size as needed */
+color: #333; /* Icon color */
+margin-left: 10px; /* Spacing between icon and text */
+}
+
+/* Style for the "Current Location" list */
+.location-list {
+list-style: none; /* Remove list-style */
+text-align: start;
+padding: 0;
+}
+
+/* Style for location items */
+.location-item {
+display: flex;
+align-items: center;
+padding: 0px;
+justify-content: flex-start;
+text-align: start;
+flex-direction: column;
+margin: 0;
+}
+.location-item h3{
+align-self: self-start;
+margin-bottom: 0;
+}
+.location-item span{
+align-self: self-start;
+margin-left: 20px;
+}
+
+
+#CurrentLocation{
+margin: 0;
+padding: 0;
+text-align: start;
+justify-content: start;
+align-items: start;
+}
+
+#PreviousLocation{
+margin: 0;
+padding: 0;
+text-align: start;
+justify-content: start;
+align-items: start;
+}
+#logOut{
+padding: 7px;
+margin-left: 70px;
+border: none;
+background: none;
+font-weight: bold;
+
+}
+#logOut::before {
+content: "\f08b";
+font-family: FontAwesome;
+float: left;
+color: black;
+font-size: 18px;
+margin-right: 8px;
+}

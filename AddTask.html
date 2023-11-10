@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="AddTaskCss.css">
+    <script src="AddTaskJs.js" defer></script>
+    <title>AddTask</title>
+</head>
+<body>
+    <div class="container">
+        <div class="both">
+            <div class="task">
+                <button id="taskBtn" class="active-button"><span id="icon-of-task-button"><i
+                            class='bx bx-task'></i></span>Task</button>
+            </div>
+            <div class="location">
+                <button id="locationBtn" class="inactive-button"><span id="icon-of-location-button"><i
+                            class="bx bx-location-plus"></i></span>Location</button>
+            </div>
+        </div>
+        <div class="tasks" id="taskView">
+            <h3><span id="openTaskModal"><i class="bx bx-plus"></i></span> Add New Task</h3>
+            <!-- Incomplete tasks section -->
+            <h3>Incomplete</h3>
+            <ul id="incompleteTasks">
+                <!-- Add incomplete tasks here -->
+            </ul>
+            <!-- Completed tasks section -->
+            <h3>Completed</h3>
+            <ul id="completedTasks">
+                <!-- Add completed tasks here -->
+            </ul>
+        </div>
+        <div class="tasks location-content" id="locationView" style="display:none;">
+            <h3><span id="openLocationModal"><i class="bx bx-plus"></i></span>Check In</h3>
+            <!-- Current location section -->
+            <h3>Current Location</h3>
+            <ul id="CurrentLocation">
+                
+            </ul>
+            <!-- Previous location section -->
+            <h3>Previous Locations</h3>
+            <ul id="PreviousLocation">
+               
+            </ul>
+        </div>
+    </div>
+
+    <div id="taskModal" class="modal">
+        <div class="modal-content">
+            <h3>New Task</h3>
+            <div class="data-in-mini-page">
+                <div class="summary">
+                    <span id="icon-mini"><i class='bx bxs-notepad'></i></span>
+                    <h5>Summary</h5>
+                    <textarea name="" id="text-area-summary" cols="30" rows="10"></textarea>
+                </div>
+                <div class="description">
+                    <span id="icon-des"><i class='bx bx-message-rounded-dots'></i></span>
+                    <h5>Description</h5>
+                    <textarea name="" id="text-area-description" cols="30" rows="10"></textarea>
+                </div>
+                <div class="date">
+                    <span id="icon-date"><i class='bx bx-stopwatch'></i></span>
+                    <h5>Due Date</h5>
+                    <input type="text" class="date-input" required>
+                </div>
+            </div>
+            <div class="button-container">
+                <button id="okTaskButton">OK</button>
+                <button class="cancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <div id="locationModal" class="lmodal">
+    <div class="locationn-content">
+        <h3>Enter your location</h3>
+        <div class="data-in-location-page">
+            <textarea name="location-description" id="location-description" cols="30" rows="3" placeholder="Location Description"></textarea>
+            <textarea name="location-notes" id="location-notes" cols="30" rows="3" placeholder="Location Notes"></textarea>
+            <div class="locationbuttons">
+                <button id="locationAdd">OK</button>
+                <button class="locationCancel" onclick="hideLocationModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<button id="logOut" type="button"> LogOut </button>
+</body>
+</html>
